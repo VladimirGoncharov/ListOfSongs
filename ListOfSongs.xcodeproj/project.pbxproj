@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		384C88A20F8706584C700A1F /* Pods_Abstract_ListOfSongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879BC80EEF6E193D87E2DE2 /* Pods_Abstract_ListOfSongs.framework */; };
+		7FD441C39578071CB3338A00 /* Pods_Abstract_ListOfSongsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7299514440047155510684 /* Pods_Abstract_ListOfSongsTests.framework */; };
+		B802D7A9695CFB083B2AB8DF /* Pods_Abstract_ListOfSongsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE529E0F9537541F43EA817 /* Pods_Abstract_ListOfSongsUITests.framework */; };
+		E72CA1A41DB21D730029ECD3 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1A31DB21D730029ECD3 /* APIManager.m */; };
+		E72CA1A71DB2309E0029ECD3 /* iTunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1A61DB2309E0029ECD3 /* iTunesAPI.m */; };
+		E72CA1AE1DB23EF60029ECD3 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1AD1DB23EF60029ECD3 /* CoreDataManager.m */; };
+		E72CA1B21DB240E70029ECD3 /* LSiTunesSongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1B01DB240E70029ECD3 /* LSiTunesSongCell.m */; };
+		E72CA1B31DB240E70029ECD3 /* LSiTunesSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72CA1B11DB240E70029ECD3 /* LSiTunesSongCell.xib */; };
+		E72CA1B61DB28E2E0029ECD3 /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = E72CA1B51DB28E2E0029ECD3 /* mogend.sh */; };
+		E72CA1BE1DB28F6B0029ECD3 /* _Song.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1BB1DB28F6B0029ECD3 /* _Song.m */; };
+		E72CA1BF1DB28F6B0029ECD3 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1BD1DB28F6B0029ECD3 /* Song.m */; };
+		E72CA1C71DB3711C0029ECD3 /* LSValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1C61DB3711C0029ECD3 /* LSValueTransformer.m */; };
+		E72CA1D01DB380370029ECD3 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1CF1DB380370029ECD3 /* Base.m */; };
+		E72CA1D31DB380450029ECD3 /* _Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1D21DB380450029ECD3 /* _Base.m */; };
+		E72CA1D61DB39B0A0029ECD3 /* ManagedMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA1D51DB39B0A0029ECD3 /* ManagedMappingProvider.m */; };
+		E7B564121DB21212002A57ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B564111DB21212002A57ED /* main.m */; };
+		E7B564151DB21212002A57ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B564141DB21212002A57ED /* AppDelegate.m */; };
+		E7B564181DB21212002A57ED /* ListOfSongs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7B564161DB21212002A57ED /* ListOfSongs.xcdatamodeld */; };
+		E7B5641B1DB21212002A57ED /* LSListOfSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B5641A1DB21212002A57ED /* LSListOfSongController.m */; };
+		E7B5641E1DB21212002A57ED /* LSDetailSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B5641D1DB21212002A57ED /* LSDetailSongController.m */; };
+		E7B564211DB21212002A57ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B5641F1DB21212002A57ED /* Main.storyboard */; };
+		E7B564231DB21212002A57ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B564221DB21212002A57ED /* Assets.xcassets */; };
+		E7B564261DB21212002A57ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B564241DB21212002A57ED /* LaunchScreen.storyboard */; };
+		E7B564311DB21212002A57ED /* ListOfSongsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B564301DB21212002A57ED /* ListOfSongsTests.m */; };
+		E7B5643C1DB21212002A57ED /* ListOfSongsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B5643B1DB21212002A57ED /* ListOfSongsUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E72CA1B71DB28E6D0029ECD3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodeld;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/${INPUT_FILE_BASE}.momd",
+			);
+			script = "\"${SRCROOT}/ListOfSongs/mogend.sh\"";
+		};
+		E72CA1B81DB28E890029ECD3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodel;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/${INPUT_FILE_BASE}.mom",
+			);
+			script = "\"${SRCROOT}/ListOfSongs/mogend.sh\"";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		E7B5642D1DB21212002A57ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7B564051DB21212002A57ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7B5640C1DB21212002A57ED;
+			remoteInfo = ListOfSongs;
+		};
+		E7B564381DB21212002A57ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7B564051DB21212002A57ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7B5640C1DB21212002A57ED;
+			remoteInfo = ListOfSongs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E7299514440047155510684 /* Pods_Abstract_ListOfSongsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_ListOfSongsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20290206641C4D41DE817174 /* Pods-Abstract-ListOfSongsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-ListOfSongsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-ListOfSongsTests/Pods-Abstract-ListOfSongsTests.release.xcconfig"; sourceTree = "<group>"; };
+		2CC1D70A01A82DFF6D3F484C /* Pods-Abstract-ListOfSongsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-ListOfSongsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-ListOfSongsTests/Pods-Abstract-ListOfSongsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74D4E050C34DB654B718581F /* Pods-Abstract-ListOfSongs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-ListOfSongs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-ListOfSongs/Pods-Abstract-ListOfSongs.debug.xcconfig"; sourceTree = "<group>"; };
+		7FCB04F72AE01632C94D6430 /* Pods-Abstract-ListOfSongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-ListOfSongs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-ListOfSongs/Pods-Abstract-ListOfSongs.release.xcconfig"; sourceTree = "<group>"; };
+		8879BC80EEF6E193D87E2DE2 /* Pods_Abstract_ListOfSongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_ListOfSongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A802AAD3D52420CEDA0D81D1 /* Pods-Abstract-ListOfSongsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-ListOfSongsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-ListOfSongsUITests/Pods-Abstract-ListOfSongsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBE529E0F9537541F43EA817 /* Pods_Abstract_ListOfSongsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_ListOfSongsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72CA1A21DB21D730029ECD3 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		E72CA1A31DB21D730029ECD3 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		E72CA1A51DB2309E0029ECD3 /* iTunesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesAPI.h; sourceTree = "<group>"; };
+		E72CA1A61DB2309E0029ECD3 /* iTunesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesAPI.m; sourceTree = "<group>"; };
+		E72CA1A81DB2399C0029ECD3 /* ListOfSongs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListOfSongs-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		E72CA1AB1DB23A5B0029ECD3 /* ListOfSongsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListOfSongsPrefixHeader.pch; sourceTree = "<group>"; };
+		E72CA1AC1DB23EF60029ECD3 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		E72CA1AD1DB23EF60029ECD3 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		E72CA1AF1DB240E70029ECD3 /* LSiTunesSongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSiTunesSongCell.h; sourceTree = "<group>"; };
+		E72CA1B01DB240E70029ECD3 /* LSiTunesSongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSiTunesSongCell.m; sourceTree = "<group>"; };
+		E72CA1B11DB240E70029ECD3 /* LSiTunesSongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSiTunesSongCell.xib; sourceTree = "<group>"; };
+		E72CA1B51DB28E2E0029ECD3 /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
+		E72CA1BA1DB28F6B0029ECD3 /* _Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Song.h; sourceTree = "<group>"; };
+		E72CA1BB1DB28F6B0029ECD3 /* _Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Song.m; sourceTree = "<group>"; };
+		E72CA1BC1DB28F6B0029ECD3 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Song.h; path = Models/CoreData/Song.h; sourceTree = "<group>"; };
+		E72CA1BD1DB28F6B0029ECD3 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Song.m; path = Models/CoreData/Song.m; sourceTree = "<group>"; };
+		E72CA1C01DB28F9F0029ECD3 /* ModelIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelIncludes.h; path = Models/ModelIncludes.h; sourceTree = "<group>"; };
+		E72CA1C51DB3711C0029ECD3 /* LSValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSValueTransformer.h; sourceTree = "<group>"; };
+		E72CA1C61DB3711C0029ECD3 /* LSValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSValueTransformer.m; sourceTree = "<group>"; };
+		E72CA1CE1DB380370029ECD3 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = Models/CoreData/Base.h; sourceTree = "<group>"; };
+		E72CA1CF1DB380370029ECD3 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base.m; path = Models/CoreData/Base.m; sourceTree = "<group>"; };
+		E72CA1D11DB380450029ECD3 /* _Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Base.h; sourceTree = "<group>"; };
+		E72CA1D21DB380450029ECD3 /* _Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Base.m; sourceTree = "<group>"; };
+		E72CA1D41DB39B0A0029ECD3 /* ManagedMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedMappingProvider.h; sourceTree = "<group>"; };
+		E72CA1D51DB39B0A0029ECD3 /* ManagedMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedMappingProvider.m; sourceTree = "<group>"; };
+		E7B5640D1DB21212002A57ED /* ListOfSongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOfSongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B564111DB21212002A57ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7B564131DB21212002A57ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7B564141DB21212002A57ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7B564171DB21212002A57ED /* ListOfSongs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListOfSongs.xcdatamodel; sourceTree = "<group>"; };
+		E7B564191DB21212002A57ED /* LSListOfSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSListOfSongController.h; sourceTree = "<group>"; };
+		E7B5641A1DB21212002A57ED /* LSListOfSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSListOfSongController.m; sourceTree = "<group>"; };
+		E7B5641C1DB21212002A57ED /* LSDetailSongController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDetailSongController.h; sourceTree = "<group>"; };
+		E7B5641D1DB21212002A57ED /* LSDetailSongController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDetailSongController.m; sourceTree = "<group>"; };
+		E7B564201DB21212002A57ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7B564221DB21212002A57ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7B564251DB21212002A57ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7B564271DB21212002A57ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B5642C1DB21212002A57ED /* ListOfSongsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOfSongsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B564301DB21212002A57ED /* ListOfSongsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfSongsTests.m; sourceTree = "<group>"; };
+		E7B564321DB21212002A57ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B564371DB21212002A57ED /* ListOfSongsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOfSongsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B5643B1DB21212002A57ED /* ListOfSongsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfSongsUITests.m; sourceTree = "<group>"; };
+		E7B5643D1DB21212002A57ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC82CAD14BE3F18F586DB5AF /* Pods-Abstract-ListOfSongsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract-ListOfSongsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract-ListOfSongsUITests/Pods-Abstract-ListOfSongsUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7B5640A1DB21212002A57ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384C88A20F8706584C700A1F /* Pods_Abstract_ListOfSongs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B564291DB21212002A57ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD441C39578071CB3338A00 /* Pods_Abstract_ListOfSongsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B564341DB21212002A57ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B802D7A9695CFB083B2AB8DF /* Pods_Abstract_ListOfSongsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07084B229ABEDF9100AE4493 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8879BC80EEF6E193D87E2DE2 /* Pods_Abstract_ListOfSongs.framework */,
+				0E7299514440047155510684 /* Pods_Abstract_ListOfSongsTests.framework */,
+				CBE529E0F9537541F43EA817 /* Pods_Abstract_ListOfSongsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90B47B0991C94A1D60956E26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74D4E050C34DB654B718581F /* Pods-Abstract-ListOfSongs.debug.xcconfig */,
+				7FCB04F72AE01632C94D6430 /* Pods-Abstract-ListOfSongs.release.xcconfig */,
+				2CC1D70A01A82DFF6D3F484C /* Pods-Abstract-ListOfSongsTests.debug.xcconfig */,
+				20290206641C4D41DE817174 /* Pods-Abstract-ListOfSongsTests.release.xcconfig */,
+				A802AAD3D52420CEDA0D81D1 /* Pods-Abstract-ListOfSongsUITests.debug.xcconfig */,
+				EC82CAD14BE3F18F586DB5AF /* Pods-Abstract-ListOfSongsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E72CA19B1DB218180029ECD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1AF1DB240E70029ECD3 /* LSiTunesSongCell.h */,
+				E72CA1B01DB240E70029ECD3 /* LSiTunesSongCell.m */,
+				E72CA1B11DB240E70029ECD3 /* LSiTunesSongCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E72CA19C1DB2181E0029ECD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1B41DB280730029ECD3 /* CoreData */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E72CA19D1DB218240029ECD3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7B564191DB21212002A57ED /* LSListOfSongController.h */,
+				E7B5641A1DB21212002A57ED /* LSListOfSongController.m */,
+				E7B5641C1DB21212002A57ED /* LSDetailSongController.h */,
+				E7B5641D1DB21212002A57ED /* LSDetailSongController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E72CA19E1DB21A0D0029ECD3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1A21DB21D730029ECD3 /* APIManager.h */,
+				E72CA1A31DB21D730029ECD3 /* APIManager.m */,
+				E72CA1A51DB2309E0029ECD3 /* iTunesAPI.h */,
+				E72CA1A61DB2309E0029ECD3 /* iTunesAPI.m */,
+				E72CA1AC1DB23EF60029ECD3 /* CoreDataManager.h */,
+				E72CA1AD1DB23EF60029ECD3 /* CoreDataManager.m */,
+				E72CA1D41DB39B0A0029ECD3 /* ManagedMappingProvider.h */,
+				E72CA1D51DB39B0A0029ECD3 /* ManagedMappingProvider.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		E72CA1B41DB280730029ECD3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1C81DB371B30029ECD3 /* Custom transformers */,
+				E72CA1C91DB372CF0029ECD3 /* Data */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		E72CA1B91DB28F6B0029ECD3 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1D11DB380450029ECD3 /* _Base.h */,
+				E72CA1D21DB380450029ECD3 /* _Base.m */,
+				E72CA1BA1DB28F6B0029ECD3 /* _Song.h */,
+				E72CA1BB1DB28F6B0029ECD3 /* _Song.m */,
+			);
+			name = Private;
+			path = Models/CoreData/Private;
+			sourceTree = "<group>";
+		};
+		E72CA1C11DB28FB50029ECD3 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1B51DB28E2E0029ECD3 /* mogend.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		E72CA1C81DB371B30029ECD3 /* Custom transformers */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1C51DB3711C0029ECD3 /* LSValueTransformer.h */,
+				E72CA1C61DB3711C0029ECD3 /* LSValueTransformer.m */,
+			);
+			name = "Custom transformers";
+			sourceTree = "<group>";
+		};
+		E72CA1C91DB372CF0029ECD3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E7B564161DB21212002A57ED /* ListOfSongs.xcdatamodeld */,
+				E72CA1CE1DB380370029ECD3 /* Base.h */,
+				E72CA1CF1DB380370029ECD3 /* Base.m */,
+				E72CA1BC1DB28F6B0029ECD3 /* Song.h */,
+				E72CA1BD1DB28F6B0029ECD3 /* Song.m */,
+				E72CA1B91DB28F6B0029ECD3 /* Private */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		E7B564041DB21212002A57ED = {
+			isa = PBXGroup;
+			children = (
+				E7B5640F1DB21212002A57ED /* ListOfSongs */,
+				E7B5642F1DB21212002A57ED /* ListOfSongsTests */,
+				E7B5643A1DB21212002A57ED /* ListOfSongsUITests */,
+				E7B5640E1DB21212002A57ED /* Products */,
+				90B47B0991C94A1D60956E26 /* Pods */,
+				07084B229ABEDF9100AE4493 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E7B5640E1DB21212002A57ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7B5640D1DB21212002A57ED /* ListOfSongs.app */,
+				E7B5642C1DB21212002A57ED /* ListOfSongsTests.xctest */,
+				E7B564371DB21212002A57ED /* ListOfSongsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7B5640F1DB21212002A57ED /* ListOfSongs */ = {
+			isa = PBXGroup;
+			children = (
+				E7B564131DB21212002A57ED /* AppDelegate.h */,
+				E7B564141DB21212002A57ED /* AppDelegate.m */,
+				E7B5641F1DB21212002A57ED /* Main.storyboard */,
+				E7B564221DB21212002A57ED /* Assets.xcassets */,
+				E72CA19E1DB21A0D0029ECD3 /* Services */,
+				E72CA19D1DB218240029ECD3 /* ViewControllers */,
+				E72CA19C1DB2181E0029ECD3 /* Models */,
+				E72CA19B1DB218180029ECD3 /* Views */,
+				E7B564101DB21212002A57ED /* Supporting Files */,
+			);
+			path = ListOfSongs;
+			sourceTree = "<group>";
+		};
+		E7B564101DB21212002A57ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA1C11DB28FB50029ECD3 /* Scripts */,
+				E72CA1C01DB28F9F0029ECD3 /* ModelIncludes.h */,
+				E72CA1AB1DB23A5B0029ECD3 /* ListOfSongsPrefixHeader.pch */,
+				E72CA1A81DB2399C0029ECD3 /* ListOfSongs-Bridging-Header.h */,
+				E7B564241DB21212002A57ED /* LaunchScreen.storyboard */,
+				E7B564271DB21212002A57ED /* Info.plist */,
+				E7B564111DB21212002A57ED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7B5642F1DB21212002A57ED /* ListOfSongsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7B564301DB21212002A57ED /* ListOfSongsTests.m */,
+				E7B564321DB21212002A57ED /* Info.plist */,
+			);
+			path = ListOfSongsTests;
+			sourceTree = "<group>";
+		};
+		E7B5643A1DB21212002A57ED /* ListOfSongsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7B5643B1DB21212002A57ED /* ListOfSongsUITests.m */,
+				E7B5643D1DB21212002A57ED /* Info.plist */,
+			);
+			path = ListOfSongsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7B5640C1DB21212002A57ED /* ListOfSongs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B564401DB21212002A57ED /* Build configuration list for PBXNativeTarget "ListOfSongs" */;
+			buildPhases = (
+				358F440D43EE289E91C6F6F7 /* [CP] Check Pods Manifest.lock */,
+				E7B564091DB21212002A57ED /* Sources */,
+				E7B5640A1DB21212002A57ED /* Frameworks */,
+				E7B5640B1DB21212002A57ED /* Resources */,
+				6100B2F211C411C42230FF5F /* [CP] Embed Pods Frameworks */,
+				F147C2E777FEA72464D116FA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+				E72CA1B81DB28E890029ECD3 /* PBXBuildRule */,
+				E72CA1B71DB28E6D0029ECD3 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = ListOfSongs;
+			productName = ListOfSongs;
+			productReference = E7B5640D1DB21212002A57ED /* ListOfSongs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7B5642B1DB21212002A57ED /* ListOfSongsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B564431DB21212002A57ED /* Build configuration list for PBXNativeTarget "ListOfSongsTests" */;
+			buildPhases = (
+				D07315A8FA7DDD0C91D54EB2 /* [CP] Check Pods Manifest.lock */,
+				E7B564281DB21212002A57ED /* Sources */,
+				E7B564291DB21212002A57ED /* Frameworks */,
+				E7B5642A1DB21212002A57ED /* Resources */,
+				2E0FDF48108C953762965705 /* [CP] Embed Pods Frameworks */,
+				93FBA45BD6E2AC1776851255 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7B5642E1DB21212002A57ED /* PBXTargetDependency */,
+			);
+			name = ListOfSongsTests;
+			productName = ListOfSongsTests;
+			productReference = E7B5642C1DB21212002A57ED /* ListOfSongsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7B564361DB21212002A57ED /* ListOfSongsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B564461DB21212002A57ED /* Build configuration list for PBXNativeTarget "ListOfSongsUITests" */;
+			buildPhases = (
+				A9E6A76B4D94D5E367FE6F38 /* [CP] Check Pods Manifest.lock */,
+				E7B564331DB21212002A57ED /* Sources */,
+				E7B564341DB21212002A57ED /* Frameworks */,
+				E7B564351DB21212002A57ED /* Resources */,
+				07BCAAD1A6B470784B5DDB74 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7B564391DB21212002A57ED /* PBXTargetDependency */,
+			);
+			name = ListOfSongsUITests;
+			productName = ListOfSongsUITests;
+			productReference = E7B564371DB21212002A57ED /* ListOfSongsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7B564051DB21212002A57ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = FlatStack;
+				TargetAttributes = {
+					E7B5640C1DB21212002A57ED = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					E7B5642B1DB21212002A57ED = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7B5640C1DB21212002A57ED;
+					};
+					E7B564361DB21212002A57ED = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7B5640C1DB21212002A57ED;
+					};
+				};
+			};
+			buildConfigurationList = E7B564081DB21212002A57ED /* Build configuration list for PBXProject "ListOfSongs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7B564041DB21212002A57ED;
+			productRefGroup = E7B5640E1DB21212002A57ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7B5640C1DB21212002A57ED /* ListOfSongs */,
+				E7B5642B1DB21212002A57ED /* ListOfSongsTests */,
+				E7B564361DB21212002A57ED /* ListOfSongsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7B5640B1DB21212002A57ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CA1B61DB28E2E0029ECD3 /* mogend.sh in Resources */,
+				E7B564261DB21212002A57ED /* LaunchScreen.storyboard in Resources */,
+				E7B564231DB21212002A57ED /* Assets.xcassets in Resources */,
+				E7B564211DB21212002A57ED /* Main.storyboard in Resources */,
+				E72CA1B31DB240E70029ECD3 /* LSiTunesSongCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B5642A1DB21212002A57ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B564351DB21212002A57ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07BCAAD1A6B470784B5DDB74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-ListOfSongsUITests/Pods-Abstract-ListOfSongsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E0FDF48108C953762965705 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-ListOfSongsTests/Pods-Abstract-ListOfSongsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		358F440D43EE289E91C6F6F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6100B2F211C411C42230FF5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-ListOfSongs/Pods-Abstract-ListOfSongs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93FBA45BD6E2AC1776851255 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-ListOfSongsTests/Pods-Abstract-ListOfSongsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E6A76B4D94D5E367FE6F38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D07315A8FA7DDD0C91D54EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F147C2E777FEA72464D116FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract-ListOfSongs/Pods-Abstract-ListOfSongs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7B564091DB21212002A57ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CA1D01DB380370029ECD3 /* Base.m in Sources */,
+				E72CA1C71DB3711C0029ECD3 /* LSValueTransformer.m in Sources */,
+				E72CA1BE1DB28F6B0029ECD3 /* _Song.m in Sources */,
+				E7B5641E1DB21212002A57ED /* LSDetailSongController.m in Sources */,
+				E72CA1D61DB39B0A0029ECD3 /* ManagedMappingProvider.m in Sources */,
+				E7B5641B1DB21212002A57ED /* LSListOfSongController.m in Sources */,
+				E72CA1AE1DB23EF60029ECD3 /* CoreDataManager.m in Sources */,
+				E72CA1D31DB380450029ECD3 /* _Base.m in Sources */,
+				E72CA1A71DB2309E0029ECD3 /* iTunesAPI.m in Sources */,
+				E72CA1BF1DB28F6B0029ECD3 /* Song.m in Sources */,
+				E72CA1A41DB21D730029ECD3 /* APIManager.m in Sources */,
+				E7B564181DB21212002A57ED /* ListOfSongs.xcdatamodeld in Sources */,
+				E7B564151DB21212002A57ED /* AppDelegate.m in Sources */,
+				E72CA1B21DB240E70029ECD3 /* LSiTunesSongCell.m in Sources */,
+				E7B564121DB21212002A57ED /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B564281DB21212002A57ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B564311DB21212002A57ED /* ListOfSongsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B564331DB21212002A57ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B5643C1DB21212002A57ED /* ListOfSongsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7B5642E1DB21212002A57ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7B5640C1DB21212002A57ED /* ListOfSongs */;
+			targetProxy = E7B5642D1DB21212002A57ED /* PBXContainerItemProxy */;
+		};
+		E7B564391DB21212002A57ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7B5640C1DB21212002A57ED /* ListOfSongs */;
+			targetProxy = E7B564381DB21212002A57ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7B5641F1DB21212002A57ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7B564201DB21212002A57ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7B564241DB21212002A57ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7B564251DB21212002A57ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7B5643E1DB21212002A57ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E7B5643F1DB21212002A57ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7B564411DB21212002A57ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D4E050C34DB654B718581F /* Pods-Abstract-ListOfSongs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ListOfSongsPrefixHeader.pch";
+				INFOPLIST_FILE = ListOfSongs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatstack.ListOfSongs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ListOfSongs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E7B564421DB21212002A57ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCB04F72AE01632C94D6430 /* Pods-Abstract-ListOfSongs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ListOfSongsPrefixHeader.pch";
+				INFOPLIST_FILE = ListOfSongs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatstack.ListOfSongs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ListOfSongs-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E7B564441DB21212002A57ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC1D70A01A82DFF6D3F484C /* Pods-Abstract-ListOfSongsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ListOfSongsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatstack.ListOfSongsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListOfSongs.app/ListOfSongs";
+			};
+			name = Debug;
+		};
+		E7B564451DB21212002A57ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20290206641C4D41DE817174 /* Pods-Abstract-ListOfSongsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ListOfSongsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatstack.ListOfSongsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListOfSongs.app/ListOfSongs";
+			};
+			name = Release;
+		};
+		E7B564471DB21212002A57ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A802AAD3D52420CEDA0D81D1 /* Pods-Abstract-ListOfSongsUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ListOfSongsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatstack.ListOfSongsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ListOfSongs;
+			};
+			name = Debug;
+		};
+		E7B564481DB21212002A57ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC82CAD14BE3F18F586DB5AF /* Pods-Abstract-ListOfSongsUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ListOfSongsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Flatstack.ListOfSongsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ListOfSongs;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7B564081DB21212002A57ED /* Build configuration list for PBXProject "ListOfSongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B5643E1DB21212002A57ED /* Debug */,
+				E7B5643F1DB21212002A57ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B564401DB21212002A57ED /* Build configuration list for PBXNativeTarget "ListOfSongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B564411DB21212002A57ED /* Debug */,
+				E7B564421DB21212002A57ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B564431DB21212002A57ED /* Build configuration list for PBXNativeTarget "ListOfSongsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B564441DB21212002A57ED /* Debug */,
+				E7B564451DB21212002A57ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B564461DB21212002A57ED /* Build configuration list for PBXNativeTarget "ListOfSongsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B564471DB21212002A57ED /* Debug */,
+				E7B564481DB21212002A57ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E7B564161DB21212002A57ED /* ListOfSongs.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7B564171DB21212002A57ED /* ListOfSongs.xcdatamodel */,
+			);
+			currentVersion = E7B564171DB21212002A57ED /* ListOfSongs.xcdatamodel */;
+			path = ListOfSongs.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E7B564051DB21212002A57ED /* Project object */;
+}

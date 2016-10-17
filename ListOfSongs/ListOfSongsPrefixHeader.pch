@@ -1,0 +1,18 @@
+//
+//  ListOfSongsPrefixHeader.pch
+//  ListOfSongs
+//
+//  Created by Vladimir Goncharov on 15/10/2016.
+//  Copyright © 2016 FlatStack. All rights reserved.
+//
+
+#ifndef ListOfSongsPrefixHeader_pch
+#define ListOfSongsPrefixHeader_pch
+
+#ifdef __OBJC__
+#import "APIManager.h"
+#import "CoreDataManager.h"
+#import "MBProgressHUD.h"
+#endif
+
+#endif /* ListOfSongsPrefixHeader_pch */

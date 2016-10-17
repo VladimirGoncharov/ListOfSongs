@@ -1,0 +1,6 @@
+framework module Pods_Abstract_ListOfSongs {
+  umbrella header "Pods-Abstract-ListOfSongs-umbrella.h"
+
+  export *
+  module * { export * }
+}
