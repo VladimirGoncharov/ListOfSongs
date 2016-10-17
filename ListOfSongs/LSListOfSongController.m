@@ -46,13 +46,17 @@ NSString * _Nonnull const LSListOfSongControllerSegue_toString[] = {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UITableView *tableView = self.searchDisplayController.searchResultsTableView;
     UINib *cellNib = [UINib nibWithNibName:@"LSiTunesSongCell" bundle:nil];
     if (cellNib != nil) {
-        [self.searchDisplayController.searchResultsTableView registerNib:cellNib
-                                                  forCellReuseIdentifier:LSListOfSongControllerCell_toString[LSListOfSongControllerCellTrack]];
+        [tableView registerNib:cellNib
+        forCellReuseIdentifier:LSListOfSongControllerCell_toString[LSListOfSongControllerCellTrack]];
     } else {
         assert(@"LSiTunesSongCell nib not found");
     }
+    
+    tableView.rowHeight = UITableViewAutomaticDimension;
+    tableView.estimatedRowHeight = 100.0;
 }
 
 #pragma mark - Segues
@@ -130,6 +134,11 @@ NSString * _Nonnull const LSListOfSongControllerSegue_toString[] = {
         [self.progress showAnimated:true];
         APISearchRequest *request = [[APISearchRequest alloc] initWithSearchString:text];
         __weak typeof(request) wRequest = request;
+        request.progress = ^(NSProgress * progress) {
+            if ([wRequest isEqual:self.lastRequest]) {
+                self.progress.progressObject = progress;
+            }
+        };
         request.success = ^(NSURLSessionDataTask * dataTask, APISearchResponseObject *response) {
             if ([wRequest isEqual:self.lastRequest]) {
                 [self.searchDisplayController.searchResultsTableView reloadData];
@@ -178,11 +187,6 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 @end
 
 @implementation LSListOfSongController(UITableViewDelegate)
-
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
-}
 
 - (void)tableView:(UITableView *)tableView
 didEndDisplayingCell:(UITableViewCell *)cell

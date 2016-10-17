@@ -70,7 +70,6 @@
         <!--Detail Song Controller-->
         <scene sceneID="6UP-RK-xYR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vld-2e-HuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LSDetailSongController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UVb-hI-R0i" customClass="LSDetailSongController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oVu-L6-LT7"/>
@@ -88,27 +87,27 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-Oi-5Bj">
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydR-uB-CLy">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydR-uB-CLy">
                                                     <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccS-pf-9WW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccS-pf-9WW">
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkV-hu-Xcg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkV-hu-Xcg">
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ks9-VM-BjK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ks9-VM-BjK">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Ovb-eS-g2v"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -116,7 +115,7 @@
                                             <constraints>
                                                 <constraint firstItem="ydR-uB-CLy" firstAttribute="leading" secondItem="j4d-Oi-5Bj" secondAttribute="leading" constant="8" id="3fm-jQ-2S2"/>
                                                 <constraint firstItem="ccS-pf-9WW" firstAttribute="top" secondItem="ydR-uB-CLy" secondAttribute="bottom" constant="12" id="5lQ-qv-6IG"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ks9-VM-BjK" secondAttribute="bottom" constant="24" id="84l-i3-8cf"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ks9-VM-BjK" secondAttribute="bottom" constant="30" id="84l-i3-8cf"/>
                                                 <constraint firstItem="ydR-uB-CLy" firstAttribute="top" secondItem="j4d-Oi-5Bj" secondAttribute="top" constant="8" id="KCT-ou-WzT"/>
                                                 <constraint firstAttribute="trailing" secondItem="RkV-hu-Xcg" secondAttribute="trailing" constant="8" id="KCy-Jf-u7T"/>
                                                 <constraint firstAttribute="trailing" secondItem="ydR-uB-CLy" secondAttribute="trailing" constant="8" id="QJB-w3-Vsw"/>
@@ -124,13 +123,13 @@
                                                 <constraint firstAttribute="height" constant="350" id="gZd-Qi-UEW"/>
                                                 <constraint firstItem="RkV-hu-Xcg" firstAttribute="leading" secondItem="j4d-Oi-5Bj" secondAttribute="leading" constant="8" id="kD3-v9-ThA"/>
                                                 <constraint firstAttribute="trailing" secondItem="ccS-pf-9WW" secondAttribute="trailing" constant="8" id="wdF-xq-1kw"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ks9-VM-BjK" secondAttribute="trailing" constant="24" id="wgv-j6-nyy"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ks9-VM-BjK" secondAttribute="trailing" constant="30" id="wgv-j6-nyy"/>
                                                 <constraint firstItem="RkV-hu-Xcg" firstAttribute="top" secondItem="ccS-pf-9WW" secondAttribute="bottom" constant="8" id="zCV-l9-0kD"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzk-C4-p21">
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -166,6 +165,7 @@
                         <outlet property="trackLabel" destination="RkV-hu-Xcg" id="cUj-CD-70a"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vld-2e-HuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="-367.46626686656674"/>
         </scene>

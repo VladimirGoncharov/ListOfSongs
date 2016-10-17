@@ -10,6 +10,11 @@
 
 @implementation LSiTunesSongCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.trackImageView.layer.cornerRadius = 6.0f;
+}
+
 - (void)prepareForReuse {
     [self.trackImageView sd_cancelCurrentImageLoad];
     
